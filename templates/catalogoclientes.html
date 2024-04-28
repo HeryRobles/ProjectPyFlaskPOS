@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo de Productos</title>
+    <title>Catálogo de Clientes</title>
 </head>
 
 <body>
+
     <nav>
         <ul>
             <li><a href="/productos">Productos</a></li>
@@ -15,24 +16,28 @@
             <li><a href="/usuarios">Usuarios</a></li>
         </ul>
     </nav>
-
+    
     <div>
-        <h1>Catalogo de Productos</h1>
+        <h1>Catálogo de Clientes</h1>
 
         <table>
             <thead>
                 <tr>
-                    <th>Codigo del Producto</th>
-                    <th>Nombre del Producto</th>
-                    <th>Precio del Producto</th>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido materno</th>
+                    <th>Apellido paterno</th>
+                    <th>Contraseña</th>
                 </tr>
             </thead>
             <tbody>
-                {% for producto in productos %}
+                {% for cliente in clientes %}
                 <tr>
-                    <td>{{ producto[0] }}</td>
-                    <td>{{ producto[1] }}</td>
-                    <td>${{ producto[2] }}</td>
+                    <td>{{ cliente[0] }}</td>
+                    <td>{{ cliente[1] }}</td>
+                    <td>{{ cliente[2] }}</td>
+                    <td>{{ cliente[3] }}</td>
+                    <td>{{ cliente[4] }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

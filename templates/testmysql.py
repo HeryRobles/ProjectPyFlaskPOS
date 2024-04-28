@@ -6,3 +6,12 @@ mydb = mysql.connector.connect(
     password="",
     database="pos"
 )
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM  productos")
+
+myresult = mycursor.fetchall()
+
+for x in myresult:
+  print(x)
